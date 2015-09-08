@@ -151,7 +151,8 @@ namespace SunlessSeaExtractor
 
             //
 
-            JToken data = JsonConvert.DeserializeObject(json) as JToken;
+            //JToken data = JsonConvert.DeserializeObject(json) as JToken;
+            JToken data = JToken.Parse(json);
 
             // Generate translate dictionary
             Dictionary<int, string> trMap = new Dictionary<int, string>();
@@ -219,7 +220,8 @@ namespace SunlessSeaExtractor
         {
             StringBuilder sb = new StringBuilder();
 
-            JToken data = JsonConvert.DeserializeObject(json) as JToken;
+            //JToken data = JsonConvert.DeserializeObject(json) as JToken;
+            JToken data = JToken.Parse(json);
 
             // Create TXT_collection
             var txt = new List<TextCollector.TXT_collection>();
