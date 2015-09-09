@@ -180,6 +180,14 @@ namespace SunlessSeaExtractor
                 string text = translated.ReadLine();
                 string empty_string = translated.ReadLine();        // Empty \r\n
 
+                if (empty_string == null) // This is mean, that is are end of file, and reader don't read last NEWLINE
+                {
+                    if (translated.EndOfStream == false)
+                        throw new Exception("Error reading from SRT file.");
+
+                    empty_string = "";
+                }
+
                 if (/*text == "" &&*/ empty_string.Trim() != "" && empty_string.Trim() != "##COMMENT##")   // If empty line in file lines droped
                 {
                     PushString = empty_string;
