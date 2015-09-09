@@ -43,7 +43,7 @@ namespace SunlessSeaExtractor
 
                                         using (StreamWriter sw = new StreamWriter(ReplaceExtensionAndPath(file, outputDir, ".json"), false, Encoding.UTF8)) // Output file
                                         using (StreamReader sr = new StreamReader(file, Encoding.UTF8)) // Input json file
-                                        using (StreamReader trsr = new StreamReader(trFile, Encoding.GetEncoding(1251))) // Input translated file
+                                        using (StreamReader trsr = new StreamReader(trFile, Encoding.UTF8)) // Input translated file
                                         using (StreamWriter testlog = new StreamWriter("TestResult.log")) // Test Result Writer
                                         {
                                             ssetr.SrtToJson(sr, trsr, sw, testlog, file);
@@ -71,7 +71,7 @@ namespace SunlessSeaExtractor
 
                                     foreach (var file in files)
                                     {
-                                        using (StreamWriter sw = new StreamWriter(ReplaceExtensionAndPath(file, outputDir, ".txt"), false, Encoding.GetEncoding(1251)))
+                                        using (StreamWriter sw = new StreamWriter(ReplaceExtensionAndPath(file, outputDir, ".txt"), false, Encoding.UTF8))
                                         {
                                             using (StreamReader sr = new StreamReader(file, Encoding.UTF8))
                                             {
