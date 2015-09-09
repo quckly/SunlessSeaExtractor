@@ -62,7 +62,19 @@ namespace SunlessSeaExtractor
         {
             {"Name", "N"},
             {"Description", "D"},
-            {"Tooltip", "T"}
+            {"Tooltip", "T"},
+            
+            // additional keys for SunlessSea game
+            {"HumanName", "Hn"},
+            {"Notes","Nt"},
+            {"Title","Tt"},
+            {"Label","L"},
+            {"MoveMessage","MM"},
+            {"ButtonText", "BT"},
+            {"LevelDescriptionText","LDT"},
+            {"ChangeDescriptionText","CDT"},
+            {"AvailableAt","AA"}
+            // end of additional keys for SS
         };
 
         private TextWriter testOutput;
